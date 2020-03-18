@@ -16,6 +16,7 @@ def index():
 def show():
 	t = request.form['txt']
 	arr = tokenize.sent_tokenize(t)
+	
 	kw = []
 	booga = ""
 	for sentence in arr:
@@ -24,7 +25,7 @@ def show():
 		for words in keywords:
 			sentence = sentence.replace(words, '___')
 		booga = booga +  sentence + " "
- 
+
 	k = []
 	for i in kw:
 		for j in i:
